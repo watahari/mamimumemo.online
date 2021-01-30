@@ -1,7 +1,10 @@
 # まみむメモ
 
-Podcast企画(仮)
+Podcast
 
 # original
 forked Yattecast
 https://r7kamura.github.io/yattecast/
+
+# Local run
+`bundle exec jekyll serve`
