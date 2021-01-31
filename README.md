@@ -2,7 +2,8 @@
 
 Podcast
 
-# original
+# original source
+by Ryo Nakamura
 forked Yattecast
 https://r7kamura.github.io/yattecast/
 

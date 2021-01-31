@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+      <div class="container">
+        <article class="article card">
+          <header class="article-header card-header">
+            <h1 class="card-heading">
+              <a href="{{ page.url | prepend:site.github.url }}">
+                登録して聴く / Subscribe
+              </a>
+            </h1>
+          </header>
+          <section class="card-body markdown">
+            <div class="footer-sections-element-description">
+              下記のお好きなサービスで聴くことができます(無料)。
+            </div>
+            <ul>
+              {% if site.itunes_podcast_url %}
+                <li>
+                  <a href="{{ site.itunes_podcast_url }}" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/app-icon-podcasts/standard/en-US?size=83x83&amp;releaseDate=1612008000&h=8512f6057880c1815a2c180c0cc26ab9" alt="App Icon Apple Podcasts" style="border-radius: 1px; width: 20px; height: 20px;"> iPhoneで聴く (Apple Podcasts)</a>
+                </li>
+              {% endif %}
+              {% if site.spotify_podcast_url %}
+                <li>
+                  <a href="{{ site.spotify_podcast_url }}" target="_blank"><img src="./images/Spotify_Icon_RGB_Green.png" style="width: 20px; height: 20px;"> Spotifyで聴く</a>
+                </li>
+              {% endif %}
+              {% if site.google_podcast_url %}
+                <li>
+                  <a href="{{ site.google_podcast_url }}" target="_blank">Google Podcastで聴く</a>
+                </li>
+              {% endif %}
+              <li>
+                <a href="http://subscribeonandroid.com/{{ site.github.url | remove: "https://" | remove: "http://" }}/feed.xml" target="_blank"><img src="./images/android-24px.svg" style="width: 20px; height: 20px;"> Androidで聴く (お使いのPodcastアプリで開かれます)</a>
+              </li>
+              {% if site.amazon_podcast_url %}
+                <li>
+                  <a href="{{ site.amazon_podcast_url }}" target="_blank">Amazon Music Podcastsで聴く</a>
+                </li>
+              {% endif %}
+              {% if site.anchor_podcast_url %}
+                <li>
+                  <a href="{{ site.anchor_podcast_url }}" target="_blank">Anchorで聴く</a>
+                  <ul>
+                   <li>(下記はAnchor経由で配信されています)</li>
+                   <li><a href="https://www.breaker.audio/mamimumemo">Breakerで聴く</a></li>
+                   <li><a href="https://pca.st/79b2nqzy">Pocket Castsで聴く</a></li>
+                   <li><a href="https://radiopublic.com/-WkroEM">RadioPublicで聴く</a></li>
+                  </ul>
+                </li>
+              {% endif %}
+              <li>
+                <a href="{{ site.github.url }}/feed.xml" target="_blank">RSSで登録する</a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
