@@ -36,6 +36,22 @@
                 <a href="{{ page.audio_file_path | prepend:site.github.url }}">MP3ファイルをダウンロード</a>
               </small>
             </p>
+            <p class="text-center">
+              {% if site.itunes_podcast_url %}
+              <!-- Apple Podcasts -->
+              <a href="{{ site.itunes_podcast_url }}" style="display: inline-block; overflow: hidden; border-radius: 13px; width: 167px; height: 40px;" target="_blank"><img src="https://tools.applemediaservices.com/api/badges/listen-on-apple-podcasts/badge/ja-JP?size=250x83&amp;releaseDate=1612008000&h=921fd1e029703641048456ba30bb29f1" alt="Listen on Apple Podcasts" style="border-radius: 13px; width: 167px; height: 40px;"></a>
+              {% endif %}
+              {% if site.spotify_podcast_url %}
+              <!-- Spotify -->
+              <a href="{{ site.spotify_podcast_url }}" style="display: inline-block; overflow: hidden; width: 167px; height: 40px;" target="_blank"><img src="/images/spotify-podcast-badge-blk-grn-660x160.png" alt="Listen on Spotify" style="border-radius: 13px; width: 167px; height: 40px;"></a>
+              {% endif %}
+              <a href="http://subscribeonandroid.com/{{ site.github.url | remove: "https://" | remove: "http://" }}/feed.xml" title="Subscribe on Android" target="_blank"><img src="https://assets.blubrry.com/soa/BadgeLarge.png" alt="Subscribe on Android" style="border:0;" /></a>
+            </p>
+            <p class="text-center">
+              <small>
+                <a href="../subscribe.html">その他のサービスで聞く</a>
+              </small>
+            </p>
             <h2>
               内容紹介
             </h2>
