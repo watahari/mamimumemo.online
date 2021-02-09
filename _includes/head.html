@@ -1,6 +1,17 @@
 <head>
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} #まみむメモfm</title>
+  {% if site.google_analytics %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
   <meta name="viewport" content="width=device-width">
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:card" content="summary" />
