@@ -27,6 +27,7 @@
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
     <googleplay:owner>{{ site.email }}</googleplay:owner>
+    <googleplay:email>{{ site.email }}</googleplay:email>
     <googleplay:author>{{ site.author }}</googleplay:author>
     <googleplay:image href="{{ site.github.url }}/images/artwork.jpg"/>
     <googleplay:category text="Games &amp; Hobbies"/>
