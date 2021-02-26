@@ -23,13 +23,13 @@
       <itunes:name>{{ site.author }}</itunes:name>
       <itunes:email>{{ site.email }}</itunes:email>
     </itunes:owner>
-    <itunes:image href="{{ site.github.url }}/images/artwork.jpg" />
+    <itunes:image href="{{ site.github.url }}/images/artwork.png" />
     <itunes:category text="Technology"/>
     <itunes:explicit>no</itunes:explicit>
     <googleplay:owner>{{ site.email }}</googleplay:owner>
     <googleplay:email>{{ site.email }}</googleplay:email>
     <googleplay:author>{{ site.author }}</googleplay:author>
-    <googleplay:image href="{{ site.github.url }}/images/artwork.jpg"/>
+    <googleplay:image href="{{ site.github.url }}/images/artwork.png"/>
     <googleplay:category text="Games &amp; Hobbies"/>
     {% for post in site.posts %}
       <item>
@@ -43,7 +43,7 @@
         <itunes:subtitle>{{ post.description }}</itunes:subtitle>
         <itunes:duration>{{ post.duration }}</itunes:duration>
         <itunes:explicit>no</itunes:explicit>
-        <media:thumbnail url="{{ site.github.url }}/images/artwork.jpg"/>
+        <media:thumbnail url="{{ site.github.url }}/images/artwork.png"/>
       </item>
     {% endfor %}
   </channel>
